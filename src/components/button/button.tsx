@@ -1,12 +1,13 @@
-import React from "react";
+import React, { ComponentPropsWithoutRef } from "react";
 import { StyledButton } from "./button.styles";
 
-export interface IButtonProps {
+export interface IButtonProps extends ComponentPropsWithoutRef<"button"> {
   children: React.ReactNode | undefined;
   size?: "small" | "large";
   shape?: "round" | "square";
   href?: string;
   width?: string;
+  backgroundColor?: string;
 }
 
 export const Button = ({
@@ -14,9 +15,17 @@ export const Button = ({
   size = "small",
   shape = "round",
   width,
+  backgroundColor,
+  ...otherProps
 }: IButtonProps) => {
   return (
-    <StyledButton size={size} shape={shape} width={width}>
+    <StyledButton
+      size={size}
+      shape={shape}
+      width={width}
+      backgroundColor={backgroundColor}
+      {...otherProps}
+    >
       {children}
     </StyledButton>
   );

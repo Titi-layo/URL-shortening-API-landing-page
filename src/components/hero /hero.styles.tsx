@@ -7,6 +7,7 @@ export const StyledHero = styled.div`
   .description {
     color: var(--grayish-violet);
     margin: 15px 0 15px;
+    font-weight: 700;
   }
   button {
     width: unset;
@@ -19,8 +20,6 @@ export const StyledHero = styled.div`
 
   svg {
     --width: 160px;
-    --offset: 0;
-    transform: translateX(var(--offset));
     max-width: calc(100% + var(--width));
     width: calc(100% + var(--width));
     margin-bottom: 20px;
@@ -28,23 +27,24 @@ export const StyledHero = styled.div`
 
   @media (min-width: 768px) {
     margin-bottom: 30px;
-    > div {
-      align-items: center;
-      display: flex;
-      flex-direction: row-reverse;
-      gap: 2rem;
 
-      .text,
-      .illustration {
-        flex: 1;
-      }
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
 
-      svg {
-        --width: 120px;
-        --offset: 120px;
-        margin-bottom: unset;
-      }
+    .text,
+    .illustration {
+      flex: 1;
     }
+
+    svg {
+      --width: 120px;
+      --offset: 120px;
+      transform: translateX(var(--offset));
+      margin-bottom: unset;
+    }
+
     text-align: left;
     h1 {
       font-size: 4rem;

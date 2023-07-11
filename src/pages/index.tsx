@@ -5,6 +5,8 @@ import { Form } from "../components/form/form";
 import { Header } from "../components/header/header";
 import { Hero } from "../components/hero /hero";
 import { Statistics } from "../components/statistics/statistics";
+import { Boost } from "../components/boost/boost";
+import { Footer } from "../components/footer/footer";
 
 const Home: NextPage = () => {
   return (
@@ -29,6 +31,8 @@ const Home: NextPage = () => {
       <Hero />
       <Form />
       <Statistics />
+      <Boost />
+      <Footer />
     </div>
   );
 };

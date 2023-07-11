@@ -13,7 +13,7 @@ export const Header = () => {
     <Container>
       <StyledHeader>
         <div className="wrapper">
-          <Logo />
+          <Logo colour="black" />
           <button className="faBars" onClick={() => setShowNav(!showNav)}>
             <FontAwesomeIcon icon={faBars} />
           </button>

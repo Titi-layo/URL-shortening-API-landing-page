@@ -4,8 +4,8 @@ import { Container } from "../container/container";
 
 export const Hero = () => {
   return (
-    <StyledHero>
-      <Container>
+    <Container>
+      <StyledHero>
         <div className="illustration">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 733 482">
             <defs>
@@ -435,7 +435,7 @@ export const Hero = () => {
             Get Started
           </Button>
         </div>
-      </Container>
-    </StyledHero>
+      </StyledHero>
+    </Container>
   );
 };

@@ -1,25 +1,21 @@
 import Image from "next/image";
 import { ReactNode } from "react";
 import { StyledCard } from "./card.styles";
+import { Ident } from "../ident/ident";
 
-interface CardProps {
+export interface CardProps {
   title: string;
   description: string;
-  image?: string;
-  imageAlt?: string;
-  children?: ReactNode;
+  image?: ReactNode;
+  // imageAlt?: string;
+  // children?: ReactNode;
+  items?: number;
 }
 
-export default function Card({
-  title,
-  description,
-  image,
-  children,
-  imageAlt,
-}: CardProps) {
+export default function Card({ title, description, image }: CardProps) {
   return (
     <StyledCard>
-      {image && <Image src={image} alt={imageAlt} width="60" height="60" />}
+      {image}
       <h3>{title}</h3>
       <p>{description}</p>
     </StyledCard>
