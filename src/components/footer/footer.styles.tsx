@@ -37,7 +37,7 @@ export const StyledFooter = styled.footer`
 
   @media (min-width: 760px) {
     flex-direction: row;
-    align-items: unset;
+    align-items: start;
 
     .extLinks {
       flex-direction: row;

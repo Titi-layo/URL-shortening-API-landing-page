@@ -3,13 +3,15 @@ import styled from "@emotion/styled";
 export const StyledSocials = styled.div`
   display: flex;
   gap: 15px;
-  align-items: flex-start;
+  align-items: center;
 
-  img {
+  svg {
     cursor: pointer;
   }
 
-  > svg:hover {
-    fill: var(--cyan);
+  a:hover {
+    path {
+      fill: var(--cyan);
+    }
   }
 `;

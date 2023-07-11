@@ -1,36 +1,37 @@
 import Image from "next/image";
 import { StyledSocials } from "./styles.social";
+import { Icon } from "../icon/icon";
 
 const socials = [
   {
-    src: "/icon-facebook.svg",
     alt: "facebook-logo",
+    type: "facebook",
+    url: "facebook.com",
   },
   {
-    src: "/icon-twitter.svg",
     alt: "twitter-logo",
+    type: "twitter",
+    url: "twitter.com",
   },
   {
-    src: "/icon-pinterest.svg",
     alt: "pinterest-logo",
+    type: "pinterest",
+    url: "pinterest.com",
   },
   {
-    src: "/icon-instagram.svg",
     alt: "instagram-logo",
+    type: "instagram",
+    url: "instagram.com",
   },
 ];
 
 export const Socials = () => {
   return (
     <StyledSocials>
-      {socials.map((social) => (
-        <Image
-          src={social.src}
-          alt={social.alt}
-          width="30"
-          height="30"
-          key={social.alt}
-        />
+      {socials.map((social, index) => (
+        <a key={index} href={social.url}>
+          <Icon type={social.type} />
+        </a>
       ))}
     </StyledSocials>
   );
