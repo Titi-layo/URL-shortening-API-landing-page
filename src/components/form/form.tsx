@@ -15,7 +15,7 @@ export const Form = () => {
     setInputText(input);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:React.FormEvent<HTMLInputElement>) => {
     e.preventDefault();
     if (!inputText) {
       setValidationMsg(true);
