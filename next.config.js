@@ -2,7 +2,7 @@
 const nextConfig = {
   output: 'export',
   reactStrictMode: true,
-  // basePath: "/URL-shortening-API-landing-page",
+  basePath: "/URL-shortening-API-landing-page",
 }
 
 module.exports = nextConfig
