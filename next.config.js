@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
   reactStrictMode: true,
   basePath: "/URL-shortening-API-landing-page",
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
