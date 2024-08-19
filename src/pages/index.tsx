@@ -26,7 +26,6 @@ const Home: NextPage = () => {
           rel="stylesheet"
         />
       </Head>
-
       <Header />
       <Hero />
       <Form />
